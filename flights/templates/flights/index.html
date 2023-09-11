@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>All flights</title>
+</head>
+<body>
+    <h1>Flights</h1>
+    <ul>
+        {% for flight in flights %}
+            <li><a href="{% url 'flights:flight' flight.id %}">Flight {{ flight.id }}: {{ flight.source }} to {{ flight.destination }}</a></li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

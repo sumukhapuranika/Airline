@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'flight.css' %}">
+    <title>Flight</title>
+</head>
+
+<body>
+    <h2>Flight {{flight.id}}</h2>
+    <ul>
+        <li>Origin: {{flight.source}}</li>
+        <li>Destination: {{flight.destination}}</li>
+        <li>Duration: {{flight.duration}}</li>
+    </ul>
+
+    <h2>Passengers</h2>
+    <ul>
+        {% for passenger in passengers %}
+        <li>{{passenger}}</li>
+        {% empty %}
+        <li>No passengers</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Add Passengers</h2>
+    <form action="{% url 'flights:book' flight.id %}" method="post">
+        {% csrf_token %}
+        <select name="passenger" id="">
+            {% for passenger in non_passengers %}
+            <option value="{{ passenger.id }}">{{passenger}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    </form>
+    <a href="{% url 'flights:index' %}">All flights</a>
+</body>
+
+</html>

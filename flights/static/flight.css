@@ -1,0 +1,99 @@
+/* Reset some default styles to ensure consistency */
+body, h2, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Style the headers (h2) */
+h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Style the unordered lists (ul) */
+ul {
+    list-style: none;
+    padding: 20px;
+}
+
+/* Style list items (li) */
+li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style links within list items (a) */
+li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Add hover effect to links */
+li a:hover {
+    color: #ff5722;
+}
+
+/* Style the form */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the select element */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Style the "All flights" link */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto; 
+    display: block; 
+    width: fit-content;
+}
+
+/* Add a hover effect */
+a:hover {
+    background-color: #ff5722;
+}
+
+
+/* Apply responsive design */
+@media (max-width: 768px) {
+    li {
+        padding: 15px;
+    }
+}
